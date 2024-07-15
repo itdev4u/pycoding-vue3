@@ -1,17 +1,21 @@
 <template>
 	<div>
-		<h1 v-show="ok">Title입니다.</h1>
-		<button v-on:click="ok = !ok">toggle</button>
+		<template v-if="visible">
+			<h1>Title</h1>
+			<p>Paragraph 1</p>
+			<p>Paragraph 2</p>
+		</template>
 	</div>
 </template>
 
 <script>
 import { ref } from 'vue';
+
 export default {
 	setup () {
-		const ok = ref(true);
+		const visible = ref(true);
 
-		return { ok }
+		return { visible }
 	}
 }
 </script>
