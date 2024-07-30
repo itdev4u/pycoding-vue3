@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!-- v-memo : 해당 값이 변경이 될 때만 업데이트 됨 -->
 		<div v-memo="[views, likes]">
 			<p>subscribers: {{ subscribers }}</p>
 			<p>views: {{ views }}</p>
