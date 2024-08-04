@@ -3,13 +3,13 @@
 		<div id="modifiers">
 			<div @click.capture="clickDiv">
 				Div 영역
-				<p @click.self="clickP">	
+				<p @click.self="clickP">
 					P 영역
-					<span @click="clickSpan">
-						SPAN 영역
-					</span>
+					<span @click="clickSpan"> SPAN 영역 </span>
 					<!--a href="https://naver.com" @click.prevent="clickA">a 영역</a-->
-					<a href="https://naver.com" @click.prevent.stop="clickA">a 영역</a>
+					<a href="https://naver.com" @click.prevent.stop="clickA"
+						>a 영역</a
+					>
 				</p>
 			</div>
 		</div>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-	setup () {
+	setup() {
 		const clickDiv = () => {
 			console.log('clickDiv');
 			//location.href='https://daum.net';
@@ -38,7 +38,7 @@ export default {
 		const clickSpan = () => {
 			console.log('clickSpan');
 			//alert('조아요');
-		};		
+		};
 
 		const clickA = () => {
 			alert('A click');
@@ -53,10 +53,10 @@ export default {
 			clickP,
 			clickSpan,
 			clickA,
-			clickOnce
-		}
-	}
-}
+			clickOnce,
+		};
+	},
+};
 </script>
 
 <style scoped>

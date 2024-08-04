@@ -5,30 +5,27 @@
 </template>
 
 <script>
-import { computed } from '@vue/reactivity'
+import { computed } from 'vue';
 import { ref, reactive } from 'vue';
 export default {
-	setup () {
+	setup() {
 		const isActive = ref(true);
 		const hasError = ref(false);
 
-		const classObject = computed(()=> {
+		const classObject = computed(() => {
 			return {
 				active: true,
-				'text-danger': false
-			}
+				'text-danger': false,
+			};
 		});
-
-	
-
 
 		return {
 			isActive,
 			hasError,
-			classObject
-		}
-	}
-}
+			classObject,
+		};
+	},
+};
 </script>
 
 <style scoped>

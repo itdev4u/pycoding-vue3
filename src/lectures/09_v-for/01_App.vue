@@ -1,44 +1,45 @@
 <template>
 	<div>
 		<ul>
-			<li v-for="( item, index ) in items" :key="item.id">{{index}} : {{item.id}} : {{ item.message }}</li>
+			<li v-for="(item, index) in items" :key="item.id">
+				{{ index }} : {{ item.id }} : {{ item.message }}
+			</li>
 		</ul>
-		<hr/>
+		<hr />
 		<ul>
 			<template v-for="(item, index) in items" :key="item.id">
 				<li v-if="item.id % 2 === 0">{{ item.message }}</li>
 			</template>
 		</ul>
-		<hr/>
+		<hr />
 		<ul>
 			<template v-for="(item, index) in evenItems" :key="item.id">
 				<li v-if="item.id % 2 === 0">{{ item.message }}</li>
 			</template>
 		</ul>
-		<hr/>
+		<hr />
 		<ul>
 			<li v-for="(value, key, index) in myObject" :key="key">
-				{{ index }} : {{ key }} : {{  value }} 
+				{{ index }} : {{ key }} : {{ value }}
 			</li>
-		</ul>		
+		</ul>
 	</div>
-	
-
-
 </template>
 
 <script>
 import { reactive, computed } from 'vue';
 export default {
-	setup () {
+	setup() {
 		const items = reactive([
-			{ id: 1, message: 'Java'},
-			{ id: 2, message: 'HTML'},
-			{ id: 3, message: 'CSS'},
-			{ id: 4, message: 'JavaScript'},
+			{ id: 1, message: 'Java' },
+			{ id: 2, message: 'HTML' },
+			{ id: 3, message: 'CSS' },
+			{ id: 4, message: 'JavaScript' },
 		]);
 
-		const evenItems = computed(() => items.filter(item => item.id % 2 === 0));
+		const evenItems = computed(() =>
+			items.filter(item => item.id % 2 === 0),
+		);
 
 		const myObject = reactive({
 			title: '제목입니다.',
@@ -46,11 +47,9 @@ export default {
 			publishedAt: '2016-04-10',
 		});
 
-		return { items, evenItems, myObject }
-	}
-}
+		return { items, evenItems, myObject };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

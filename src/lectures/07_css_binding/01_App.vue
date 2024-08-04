@@ -1,16 +1,21 @@
 <template>
 	<div>
 		<!-- 여러 class를 함께 사용할때는 ,로 구분해서 사용가능 -->
-		<div class="text" v-bind:class="{active: isActive, 'text-danger': hasError}">텍스트입니다.</div>
+		<div
+			class="text"
+			v-bind:class="{ active: isActive, 'text-danger': hasError }"
+		>
+			텍스트입니다.
+		</div>
 		<button v-on:click="toggle">toggle</button>
-		<button v-on:click="hasError = !hasError">toggle Error</button> 
+		<button v-on:click="hasError = !hasError">toggle Error</button>
 	</div>
 </template>
 
 <script>
 import { ref } from 'vue';
 export default {
-	setup () {
+	setup() {
 		const isActive = ref(true);
 		const hasError = ref(false);
 		const toggle = () => {
@@ -20,10 +25,10 @@ export default {
 		return {
 			isActive,
 			toggle,
-			hasError
-		}
-	}
-}
+			hasError,
+		};
+	},
+};
 </script>
 
 <style scoped>

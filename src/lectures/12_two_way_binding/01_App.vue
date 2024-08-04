@@ -35,7 +35,11 @@
 			CSS
 		</label>
 		<label>
-			<input type="checkbox" value="javascript" v-model="checkboxValues" />
+			<input
+				type="checkbox"
+				value="javascript"
+				v-model="checkboxValues"
+			/>
 			JavaScript
 		</label>
 		<div>{{ checkboxValues }}</div>

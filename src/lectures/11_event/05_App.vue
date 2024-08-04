@@ -6,7 +6,6 @@
 				{{ todo }}
 			</li>
 		</ul>
-
 	</div>
 </template>
 
@@ -14,23 +13,21 @@
 import { reactive } from 'vue';
 
 export default {
-	setup () {
+	setup() {
 		const todos = reactive([]);
 
-		const addTodo = (event) => {
+		const addTodo = event => {
 			todos.push(event.target.value);
 			event.target.value = '';
 			event.target.focus();
-		}
+		};
 
 		return {
 			todos,
-			addTodo
-		}
-	}
-}
+			addTodo,
+		};
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

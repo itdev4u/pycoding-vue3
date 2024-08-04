@@ -7,12 +7,12 @@
 <script>
 import { ref, reactive } from 'vue';
 export default {
-	setup () {
+	setup() {
 		const isActive = ref(true);
 		const hasError = ref(false);
 		const classObject = reactive({
 			active: true,
-			'text-danger': true
+			'text-danger': true,
 		});
 
 		const toggle = () => {
@@ -23,10 +23,10 @@ export default {
 			isActive,
 			toggle,
 			hasError,
-			classObject
-		}
-	}
-}
+			classObject,
+		};
+	},
+};
 </script>
 
 <style scoped>

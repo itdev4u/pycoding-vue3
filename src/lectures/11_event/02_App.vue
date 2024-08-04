@@ -3,22 +3,19 @@
 		<div id="modifiers">
 			<div @click="clickDiv">
 				Div 영역
-				<p @click="clickP">	
+				<p @click="clickP">
 					P 영역
-					<span @click="clickSpan">
-						SPAN 영역
-					</span>
+					<span @click="clickSpan"> SPAN 영역 </span>
 					<a href="https://naver.com" @click="clickA">a 영역</a>
 				</p>
 			</div>
-
 		</div>
 	</div>
 </template>
 
 <script>
 export default {
-	setup () {
+	setup() {
 		const clickDiv = () => {
 			console.log('clickDiv');
 		};
@@ -33,16 +30,16 @@ export default {
 
 		const clickA = () => {
 			alert('A click');
-		}
+		};
 
 		return {
 			clickDiv,
 			clickP,
 			clickSpan,
-			clickA
-		}
-	}
-}
+			clickA,
+		};
+	},
+};
 </script>
 
 <style scoped>

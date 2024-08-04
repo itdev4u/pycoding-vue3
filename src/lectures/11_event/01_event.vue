@@ -4,32 +4,30 @@
 		<button @click="printEventInfo('Hello', $event)">
 			Inline event Handler
 		</button>
-		<hr/>
+		<hr />
 		<input type="text" @keyup="onKeyupHandler" />
 	</div>
 </template>
 
 <script>
 export default {
-	setup () {
+	setup() {
 		const printEventInfo = (message, event) => {
 			console.log('message : ', message);
 			console.log('event.target: ', event.target);
 			console.log('event.target.tagName : ', event.target.tagName);
 		};
 
-		const onKeyupHandler = (event) => {
+		const onKeyupHandler = event => {
 			console.log('event.key : ', event.key);
 		};
 
 		return {
 			printEventInfo,
-			onKeyupHandler
-		}
-	}
-}
+			onKeyupHandler,
+		};
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

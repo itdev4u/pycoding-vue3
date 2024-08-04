@@ -8,14 +8,12 @@
 <script>
 import { ref } from 'vue';
 export default {
-	setup () {
+	setup() {
 		const ok = ref(true);
 
-		return { ok }
-	}
-}
+		return { ok };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

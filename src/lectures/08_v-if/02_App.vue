@@ -12,14 +12,12 @@
 import { ref } from 'vue';
 
 export default {
-	setup () {
+	setup() {
 		const visible = ref(true);
 
-		return { visible }
-	}
-}
+		return { visible };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

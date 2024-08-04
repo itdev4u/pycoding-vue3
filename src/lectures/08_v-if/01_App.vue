@@ -4,7 +4,7 @@
 		<h2 v-if="visible">Hello Vue3</h2>
 		<h2 v-else>visible false</h2>
 		<button v-on:click="visible = !visible">toggle</button>
-		<hr/>
+		<hr />
 		<h2 v-if="type === 'A'">A입니다.</h2>
 		<h2 v-else-if="type === 'B'">B입니다.</h2>
 		<h2 v-else-if="type === 'C'">C입니다.</h2>
@@ -19,15 +19,13 @@
 <script>
 import { ref } from 'vue';
 export default {
-	setup () {
+	setup() {
 		const visible = ref(true);
 		const type = ref('A');
 
-		return { visible, type }
-	}
-}
+		return { visible, type };
+	},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
