@@ -6,7 +6,14 @@
       <div class="row g-5">
         <!-- 05. 한줄에 3개씩 배치 -->
         <div v-for="post in posts" :key="post.id" class="col col-4">
-          <AppCard :title="post.title" :contents="post.contents"></AppCard>
+          <AppCard
+            :type="post.type"
+            :title="post.title"
+            :contents="post.contents"
+            :isLike="post.isLike"
+          ></AppCard>
+          <!-- 04. 이벤트의 방향성 -->
+          <!--button @click="post.isLike = !post.isLike">toggle</button-->
         </div>
       </div>
     </div>
@@ -22,7 +29,7 @@ export default {
   },
   setup() {
     const posts = reactive([
-      { id: 1, title: '제목1', contents: '내용1' },
+      { id: 1, type: 'notice', title: '제목1', contents: '내용1', isLike: true },
       { id: 2, title: '제목2', contents: '내용2' },
       { id: 3, title: '제목3', contents: '내용3' },
       { id: 4, title: '제목4', contents: '내용4' },
